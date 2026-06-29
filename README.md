@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Müşteri Arşiv Sistemi (Frontend)
+Bu proje, müşterilerin dijital ortamda arşivlenmesini, yönetilmesini ve güvenli bir şekilde takip edilmesini sağlayan bir React tabanlı müşteri yönetim arayüzüdür. Sistem, backend (Spring Boot) ile entegre çalışır ve JWT (JSON Web Token) tabanlı güvenli bir kimlik doğrulama mekanizmasına sahiptir.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🚀 Proje Özellikleri
+* Güvenli Kimlik Doğrulama: JWT ile oturum yönetimi.
+* Token Yenileme (Refresh Token): Oturum süresi dolduğunda kesintisiz kullanıcı deneyimi için otomatik token yenileme mantığı.
+* CRUD İşlemleri: Müşteri ekleme, listeleme, güncelleme ve silme fonksiyonları.
+* Modern Arayüz: Kullanıcı dostu ve hızlı yanıt veren bileşenler.
+* API Entegrasyonu: Spring Boot backend servisi ile CORS uyumlu iletişim.
 
-## Available Scripts
+## 🛠 Kullanılan Teknolojiler
+* Frontend: React (v19.x), JavaScript (ES6+)
+* Build Tool: Create React App
+* State Management: React Hooks (useState, useEffect)
+* HTTP Client: Fetch API (Interceptor mantığı ile özelleştirilmiş)
 
-In the project directory, you can run:
+## 📋 Kurulum ve Çalıştırma
+Projeyi yerel bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin:
 
-### `npm start`
+1. Gereksinimler
+    * Node.js (LTS sürümü önerilir)
+    * npm veya yarn
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Adımlar
+    1. Projeyi klonlayın:
+        git clone https://github.com/huriyekrtkn/customer-archiving-frontend.git
+        cd customer-archiving-frontend
+    2. Bağımlılıkları yükleyin:
+        npm install
+    3. Uygulamayı başlatın:
+        npm start
+        Uygulama otomatik olarak http://localhost:3000 adresinde açılacaktır.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🔐 Kimlik Doğrulama ve Güvenlik Akışı
+Sistem, istemci tarafında sessionStorage kullanarak tokenları saklar. İstekler esnasında otomatik olarak Authorization: Bearer <token> başlığı eklenir. Eğer API'den 401 Unauthorized hatası dönerse, sistem arka planda sahip olduğu refreshToken değerini kullanarak yeni bir erişim anahtarı talep eder ve kullanıcının oturumunu kesintisiz devam ettirir.
 
-### `npm test`
+## 📜 Komutlar
+* npm start : Geliştirme modunda çalıştırır.
+* npm run build : Projeyi üretim (production) için optimize edilmiş şekilde paketler.
+* npm test : Testleri çalıştırır.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📁 Dosya Yapısı
+* App.jsx: Uygulamanın ana mantığı, API istekleri, token yenileme (interceptor) ve ana arayüz bileşenlerini içerir.
+* package.json: Proje bağımlılıkları ve script tanımları.
+* public/: Favicon, manifest dosyası ve statik varlıklar.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+*Bu proje, Müşteri Arşivleme Sistemi'nin istemci tarafı bileşenlerini temsil etmektedir.*
