@@ -22,12 +22,12 @@ Projeyi yerel bilgisayarınızda çalıştırmak için aşağıdaki adımları i
     * npm veya yarn
 
 2. Adımlar
-    1. Projeyi klonlayın:
+    * Projeyi klonlayın:
         git clone https://github.com/huriyekrtkn/customer-archiving-frontend.git
         cd customer-archiving-frontend
-    2. Bağımlılıkları yükleyin:
+    * Bağımlılıkları yükleyin:
         npm install
-    3. Uygulamayı başlatın:
+    * Uygulamayı başlatın:
         npm start
         Uygulama otomatik olarak http://localhost:3000 adresinde açılacaktır.
 
