@@ -17,18 +17,24 @@ Bu proje, müşterilerin dijital ortamda arşivlenmesini, yönetilmesini ve güv
 ## 📋 Kurulum ve Çalıştırma
 Projeyi yerel bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin:
 
-1. Gereksinimler
+### 1. Gereksinimler
     * Node.js (LTS sürümü önerilir)
     * npm veya yarn
 
-2. Adımlar
-    * Projeyi klonlayın:
+### 2. Adımlar
+    1. **Projeyi klonlayın:**
+        ```bash
         git clone https://github.com/huriyekrtkn/customer-archiving-frontend.git
         cd customer-archiving-frontend
-    * Bağımlılıkları yükleyin:
+        ```
+    2. **Bağımlılıkları yükleyin:**
+        ```bash
         npm install
-    * Uygulamayı başlatın:
+        ```
+    3. **Uygulamayı başlatın:**
+        ```bash
         npm start
+        ```
         Uygulama otomatik olarak http://localhost:3000 adresinde açılacaktır.
 
 ## 🔐 Kimlik Doğrulama ve Güvenlik Akışı
