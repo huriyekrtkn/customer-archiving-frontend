@@ -17,22 +17,24 @@ Bu proje, müşterilerin dijital ortamda arşivlenmesini, yönetilmesini ve güv
 ## 📋 Kurulum ve Çalıştırma
 Projeyi yerel bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin:
 
-### 1. Gereksinimler
+1. Gereksinimler
     * Node.js (LTS sürümü önerilir)
     * npm veya yarn
 
-### 2. Adımlar
-    1. Projeyi klonlayın:
+2. Adımlar
+    ### 1. Projeyi klonlayın:
         git clone https://github.com/huriyekrtkn/customer-archiving-frontend.git
+
+    ### 2. Proje dizinine gidin:
         cd customer-archiving-frontend
 
-    2. Bağımlılıkları yükleyin:
+    ### 3. Bağımlılıkları yükleyin:
         npm install
 
-    3. Uygulamayı başlatın:
+    ### 4. Uygulamayı başlatın:
         npm start
 
-        Uygulama otomatik olarak http://localhost:3000 adresinde açılacaktır.
+    Uygulama otomatik olarak http://localhost:3000 adresinde açılacaktır.
 
 ## 🔐 Kimlik Doğrulama ve Güvenlik Akışı
 Sistem, istemci tarafında sessionStorage kullanarak tokenları saklar. İstekler esnasında otomatik olarak Authorization: Bearer <token> başlığı eklenir. Eğer API'den 401 Unauthorized hatası dönerse, sistem arka planda sahip olduğu refreshToken değerini kullanarak yeni bir erişim anahtarı talep eder ve kullanıcının oturumunu kesintisiz devam ettirir.
